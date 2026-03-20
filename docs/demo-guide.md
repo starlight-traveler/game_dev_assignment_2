@@ -122,9 +122,3 @@ Even though the demo is FPS-style rather than RTS-style, it still validates impo
 - frame-based updates
 
 So the demo is less about genre and more about system integration
-
-## 10. Short Explanation You Can Reuse
-
-If you need a short explanation for this file, say
-
-> The Doom demo is a proof-of-integration example. It shows that the engine can create a window, load meshes, manage camera transforms, update gameplay state, maintain a scene hierarchy plus BVH, play event-driven sounds, and render a complete interactive scene every frame.

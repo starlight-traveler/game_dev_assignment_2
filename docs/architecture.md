@@ -250,9 +250,3 @@ It is a concrete example of using the same core pieces
 - gameplay state
 
 That is useful because it shows how the engine modules are expected to be composed by future game code
-
-## 10. Architectural Summary
-
-If you need to explain the engine in one paragraph, say this
-
-> The project is organized as a small engine facade over global runtime state, a polymorphic object layer, a transform tree plus BVH spatial layer, an OpenGL rendering stack, SDL window and context management, and an SDL callback audio system. The main loop computes delta time, updates game objects, synchronizes world transforms into the scene graph, rebuilds the BVH, renders visible objects, and swaps the windows.

@@ -575,7 +575,7 @@ int main() {
         glm::scale(glm::mat4(1.0f), glm::vec3(18.0f, 3.4f, 0.8f));
     // south wall transform
     const glm::mat4 wall_south_model =
-        glm::tra nslate(glm::mat4(1.0f), glm::vec3(0.0f, 1.15f, 9.0f)) *
+        glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 1.15f, 9.0f)) *
         glm::scale(glm::mat4(1.0f), glm::vec3(18.0f, 3.4f, 0.8f));
     // east wall transform
     const glm::mat4 wall_east_model =

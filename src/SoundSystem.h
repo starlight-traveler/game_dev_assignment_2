@@ -16,7 +16,9 @@
  * @brief Playback state for an active sound stream
  */
 struct SoundState {
+    // current byte position inside the converted sound buffer
     const Uint8* cursor;
+    // number of mono sample bytes still left to mix from this sound
     Uint32 remaining;
 };
 
@@ -80,13 +82,21 @@ private:
      */
     bool queueSound(const Sound& sound);
 
+    // preloaded sounds kept alive for indexed playback
     std::vector<Sound> sounds_;
+    // SDL device handle returned by SDL_OpenAudioDevice
     SDL_AudioDeviceID device_;
+    // actual audio format accepted by the opened device
     SDL_AudioSpec obtained_spec_;
+    // active playback cursors mixed by the callback each audio tick
     std::vector<SoundState> playback_;
+    // scratch mix buffer used to assemble one callback chunk before copying to SDL
     Uint8* mix_;
+    // byte capacity of the scratch mix buffer
     int mix_capacity_bytes_;
+    // one temporary sound object for path-based playSound calls
     Sound runtime_sound_;
+    // quick flag so callers can tell whether the audio device opened successfully
     bool ready_;
 };
 
