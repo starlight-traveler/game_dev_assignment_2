@@ -9,9 +9,12 @@
     <script>
       window.MathJax = {
         tex: {
-          inlineMath: [['$', '$']],
-          displayMath: [['$$', '$$']],
+          inlineMath: [['\\(', '\\)'], ['$', '$']],
+          displayMath: [['\\[', '\\]'], ['$$', '$$']],
           processEscapes: true
+        },
+        startup: {
+          typeset: true
         },
         options: {
           skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
