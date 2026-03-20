@@ -381,10 +381,3 @@ To rerun the Objective B unit tests
 cmake --build build --target objective_b_test
 ./build/objective_b_test
 ```
-
-## Final Assessment
-
-- yes, the implementation side of Objective B is present
-- yes, the benchmark comparison is present
-- yes, the tests are present
-- the written report is now included in the docs site
